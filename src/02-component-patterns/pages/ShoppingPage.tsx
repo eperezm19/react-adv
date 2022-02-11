@@ -5,6 +5,7 @@ import {
   ProductImage,
   ProductTitle,
 } from '../components';
+import '../styles/styles-custom.css';
 
 const product = {
   id: 'ADSDS',
@@ -18,9 +19,9 @@ export const ShoppingPage = () => {
       <h1>Shopping Store</h1>
       <hr />
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        <ProductCard product={product}>
+        <ProductCard product={product} className='bg-dark'>
           <ProductImage />
-          <ProductTitle />
+          <ProductTitle className='text-white' />
           <ProductButtons />
         </ProductCard>
 
