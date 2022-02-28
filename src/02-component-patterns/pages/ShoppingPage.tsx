@@ -20,15 +20,26 @@ export const ShoppingPage = () => {
       <hr />
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         <ProductCard product={product} className='bg-dark'>
-          <ProductImage />
-          <ProductTitle className='text-white' />
-          <ProductButtons />
+          <ProductCard.Image className='custom-images' />
+          <ProductCard.Title className='text-white' />
+          <ProductCard.Buttons className='custom-buttons' />
         </ProductCard>
 
-        <ProductCard product={product}>
-          <ProductCard.Image />
-          <ProductCard.Title />
-          <ProductCard.Buttons />
+        <ProductCard product={product} className='bg-dark'>
+          <ProductImage className='custom-images' />
+          <ProductTitle className='text-white' />
+          <ProductButtons className='custom-buttons' />
+        </ProductCard>
+
+        <ProductCard
+          product={product}
+          style={{
+            backgroundColor: '#e44',
+          }}
+        >
+          <ProductImage />
+          <ProductTitle />
+          <ProductButtons />
         </ProductCard>
       </div>
     </div>
